@@ -9,9 +9,17 @@ import com.wesleyreisz.rockpaperscissors.R;
 public class Rock implements GameType {
     @Override
     public String eval(Integer opponentChoice) {
-        if (opponentChoice== R.id.btnScissors){
+        if (opponentChoice== R.id.btnScissors) {
             return GameUtils.BEATS;
-        }else if (opponentChoice==R.id.btnPaper){
+        }
+        else if (opponentChoice==R.id.btnLizard){
+                return GameUtils.BEATS;
+
+        }
+        else if (opponentChoice==R.id.btnPaper){
+            return GameUtils.LOSES_TO;
+        }
+        else if (opponentChoice==R.id.btnSpock){
             return GameUtils.LOSES_TO;
         }
         else{
